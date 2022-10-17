@@ -1,12 +1,11 @@
 import { AppProps } from "next/app";
-import Main from "../componets/layouts/Main";
+import Main from "../components/Main";
 import "../styles/globals.css";
-
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
 	return (
-	<Main>
-		<Component {...pageProps} />		
-	</Main>
+		<Main>
+			<Component {...pageProps} />
+		</Main>
 	);
 };
 

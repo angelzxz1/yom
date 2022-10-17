@@ -1,5 +1,9 @@
 const Page = () => {
-	return <div className="bg-red-600 text-9xl bold">hola mundo</div>;
+	return (
+		<div className=" p-6 flex justify-center align-center">
+			<div className="">this is the home page</div>
+		</div>
+	);
 };
 
 export default Page;
