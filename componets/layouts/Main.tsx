@@ -6,7 +6,9 @@ const Main = ({children, router, tittle })=>{
     <div>
         <div>This is the main</div>
         <NavBar />
-        {children}
+        <main>
+            {children}
+        </main>
     </div>
     )
 }
