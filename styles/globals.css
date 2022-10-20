@@ -3,3 +3,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.specialRound::before {
+	border-radius: 58% 42% 67% 33% / 36% 61% 39% 64%;
+	animation-name: bubble;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes bubble {
+	0% {
+		border-radius: 58% 42% 67% 33% / 36% 61% 39% 64%;
+		transform: rotate(0deg);
+	}
+	25% {
+		border-radius: 26% 74% 29% 71% / 17% 39% 61% 83%;
+	}
+	50% {
+		border-radius: 26% 74% 46% 54% / 61% 68% 32% 39%;
+	}
+	75% {
+		border-radius: 69% 31% 46% 54% / 80% 19% 81% 20%;
+	}
+	100% {
+		border-radius: 58% 42% 67% 33% / 36% 61% 39% 64%;
+		transform: rotate(360deg);
+	}
+}

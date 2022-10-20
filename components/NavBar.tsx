@@ -1,13 +1,57 @@
 import Link from "./Link";
+import ToggleColorMode from "./ToggleColorMode";
+type Props = {
+	path: string;
+};
 
-const NavBar = () => {
+const NavBar = ({ path }: Props) => {
 	return (
-		<nav className="h-12 bg-yellow-200 flex justify-center items-center">
-			<div className="w-3/4 bg-blue-300 ">
+		<nav
+			className="
+				w-full
+				fixed
+				backdrop-blur-[10px]
+				z-50
+
+			"
+		>
+			<div
+				className="
+					flex
+					flex-wrap
+					max-w-4xl
+					items-center
+					p-2
+					justify-between
+					ml-auto
+					mr-auto
+					relative
+					before:content-['']
+					before:absolute
+					rounded-full
+					before:top-0
+					before:bottom-0
+					before:left-[-40px]
+					before:w-[40px]
+
+					before:rounded-full
+					before:bg-transparent
+					z-[100]
+
+
+					after:content-['']
+
+				"
+			>
 				<div>
-					<Link to="/">Home</Link>
-					<Link to="/about">about</Link>
+					<Link path={path} to="/">
+						Home
+					</Link>
+					<Link path={path} to="/about">
+						About
+					</Link>
 				</div>
+				<ToggleColorMode />
 			</div>
 		</nav>
 	);
